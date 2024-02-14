@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js">
+    </script>
+    <title>Athalia Ramadhani</title>
+    <link href="https://cdn-icons-png.flaticon.com/128/9484/9484251.png" rel="icon" type="images/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="valentines">
+            <div class="envelope"></div>
+            <div class="front"></div>
+            <div class="card">
+                <div class="text">Happy Valentine's</br> Day, Athalia!</div>
+                <div class="heart"></div>
+                <div class="hearts">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                    <div class="four"></div>
+                    <div class="five"></div>
+                </div>
+            </div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+    <footer>
+        <p>Made with &hearts; by Tio Yudho Prasetio</p>
+    </footer>
+
+    <audio autoplay loop>
+        <source src="assets/musik/one_only.mp3" type="audio/mp3" />
+    </audio>
+
+    <script>
+        $(document).ready(function () {
+            $('.container').mouseenter(function () {
+                $('.card').stop().animate({
+                    top: '-90px'
+                }, 'slow');
+            }).mouseleave(function () {
+                $('.card').stop().animate({
+                    top: 0
+                }, 'slow');
+            });
+        });
+
+        // disable inspect
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        });
+
+        document.onkeydown = function (e) {
+            if (event.keyCode == 1805) {
+                return false;
+            }
+
+            if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
+                return false;
+            }
+
+            if (e.ctrlKey && e.shiftKey && e.keyCode == "C".charCodeAt(0)) {
+                return false;
+            }
+
+            if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
+                return false;
+            }
+
+            if (e.ctrlKey && e.shiftKey && e.keyCode == "U".charCodeAt(0)) {
+                return false;
+            }
+        }
+        // END
+    </script>
+</body>
+
+</html>
